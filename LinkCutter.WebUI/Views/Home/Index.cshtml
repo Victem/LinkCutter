@@ -1,0 +1,29 @@
+﻿@model LinkGenerationModel
+@{
+    
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h2>Generate short link</h2>
+    </div>
+    <div class="card-body">
+        <form asp-controller="Link" asp-action="Generate" method="post">
+            @*<input type="hidden" />*@
+            <div class="form-group">
+                <label asp-for="LinkToEncode"></label>
+                <input class="form-control" placeholder="Username" asp-for="LinkToEncode" autofocus>
+                <span asp-validation-for="LinkToEncode" class="text-danger"></span>
+            </div>
+            <button class="btn btn-primary">Generate</button>
+            
+        </form>
+    </div>
+</div>
+
+@section Scripts 
+{
+    <partial name="_ValidationScriptsPartial" />
+}
