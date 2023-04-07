@@ -10,8 +10,7 @@ namespace LinkCutter.WebUI.LinkGenerator
 
         public static string Encode(long input)
         {
-            var stringBuilder = new StringBuilder();
-            var chars = new Stack<char>();
+             var chars = new Stack<char>();
 
             if (input == 0)
             {
